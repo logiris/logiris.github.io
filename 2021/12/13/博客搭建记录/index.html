@@ -17,20 +17,20 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="博客的搭建参考了该教程……">
+  <meta name="description" content="搭建博客使用的教程，以及过程中出现的一些问题的解决方案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客搭建记录">
 <meta property="og:url" content="http://example.com/2021/12/13/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="logiris的梦境">
-<meta property="og:description" content="博客的搭建参考了该教程……">
+<meta property="og:description" content="搭建博客使用的教程，以及过程中出现的一些问题的解决方案">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-13T14:30:18.000Z">
-<meta property="article:modified_time" content="2021-12-13T15:46:03.288Z">
+<meta property="article:modified_time" content="2021-12-14T13:04:56.932Z">
 <meta property="article:author" content="logiris">
-<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2021/12/13/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
@@ -133,6 +133,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
   </ul>
 </nav>
 
@@ -183,9 +188,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-12-13 22:30:18 / 修改时间：23:46:03" itemprop="dateCreated datePublished" datetime="2021-12-13T22:30:18+08:00">2021-12-13</time>
+              <time title="创建时间：2021-12-13 22:30:18" itemprop="dateCreated datePublished" datetime="2021-12-13T22:30:18+08:00">2021-12-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-14 21:04:56" itemprop="dateModified" datetime="2021-12-14T21:04:56+08:00">2021-12-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
+                </span>
             </span>
 
           
@@ -199,15 +219,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>博客的搭建参考了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">该教程</a>……</p>
+        <p>搭建博客使用的教程，以及过程中出现的一些问题的解决方案</p>
 <span id="more"></span>
 
-<p>参考教程写得比较详细，下面记录一下搭建过程中遇到的一些问题。</p>
-<p>部署总是失败：挂代理</p>
-<p>部署完之后博客界面在本地和gitpage页面打开都是一片空白：查了一下是next版本的问题，重新下载了最新版的next然后就解决了，这里附一下最新版的下载地址：</p>
+<p>博客的搭建参考了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">该教程</a>，参考教程写得比较详细，下面记录一下搭建过程中遇到的一些问题。</p>
+<ul>
+<li><p>部署完之后博客界面在本地和gitpage页面打开都是一片空白</p>
+<p>查了一下是next版本的问题，重新下载了最新版的next然后就解决了，这里附一下最新版的下载地址：</p>
+</li>
+</ul>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
 </blockquote>
+<ul>
+<li><p>数学公式无法正常渲染（我使用的markdown编辑器是Typora）</p>
+<p>01.在主题配置文件打开mathjax</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.</span></span><br></pre></td></tr></table></figure>
+
+<p>将enable更改为true</p>
+<p>02.在01仍不管用的情况下，在需要渲染渲染MathJax数学公式的文章的Front-matter里打开mathjax开关，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 基础数论初等</span><br><span class="line">date: 2021-12-14 14:44:26</span><br><span class="line">tags: 数论</span><br><span class="line">categories: knowledge</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+
+<p><del>然后就成功渲染了</del></p>
+<p>03.但是！！！如果有换行的公式，仍旧渲染的一塌糊涂，可以按照网上的方法修改转义设置，这里另外提供一种方法</p>
+<p><strong>将Typora编辑的文件导出为html文件</strong></p>
+<p>但是这样还有一个问题，部署完之后会发现这个博客显示的是“未命名”</p>
+<p>只需要编辑html文件，在最上方添加你需要的YAML Front Matter即可，示例如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: 基础数论初等</span><br><span class="line">date: 2021-12-14 14:44:26</span><br><span class="line">tags: 数论</span><br><span class="line">categories: knowledge</span><br><span class="line">---</span><br><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后即可正常显示了。心累。</p>
+<p>缺点是更改博客需要重新生成html</p>
+</li>
+</ul>
 
     </div>
 
@@ -217,7 +260,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag"># 博客搭建</a>
           </div>
 
         
@@ -229,7 +272,10 @@
     <a href="/2021/12/13/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/14/%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA%E5%88%9D%E7%AD%89/" rel="next" title="基础数论初等">
+      基础数论初等 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -301,14 +347,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -390,6 +442,8 @@
 
 
 
+
+  
 
   
 
